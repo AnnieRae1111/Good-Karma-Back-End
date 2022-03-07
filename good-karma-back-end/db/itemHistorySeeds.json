@@ -1,0 +1,22 @@
+    [
+    {
+        "items": [
+        {
+            "category": "clothing",
+            "title": "shirt",
+            "date_posted": "03-02-2022"
+        },
+        {
+            "category": "clothing",
+            "title": "jacket",
+            "date_posted": "02-02-2022"
+        },
+        {
+            "category": "books",
+            "title": "Harry Potter and the Sorcerers Stone",
+            "date_posted": "11-05-2021"
+        }
+        ],
+        "owner": "annierae89"
+    }
+    ]

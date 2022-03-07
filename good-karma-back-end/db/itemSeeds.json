@@ -1,0 +1,32 @@
+[
+    {
+        "category":"clothing",
+        "title": "shirt",
+        "date_posted": "03-02-2022",
+        "owner":"annierae89"
+    },
+    {
+        "category":"clothing",
+        "title": "jacket",
+        "date_posted": "02-02-2022",
+        "owner":"annierae89"
+    },
+    {
+        "category":"furniture",
+        "title": "arm chair",
+        "date_posted": "02-02-2022",
+        "owner":"annierae89"
+    },
+    {
+        "category":"household",
+        "title": "blender",
+        "date_posted": "01-04-2022",
+        "owner":"annierae89"
+    },
+    {
+        "category":"books",
+        "title": "Harry Potter and the Sorceres Stone",
+        "date_posted": "11-05-2021",
+        "owner":"annierae89"
+    }
+]
