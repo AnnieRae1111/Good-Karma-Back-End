@@ -6,8 +6,7 @@ const itemSeeds = require('./itemSeeds.json')
 const User = require('../models/User')
 const userSeeds = require('./userSeeds.json')
 
-const ItemHistory = require('../models/ItemHistory')
-const ItemHistorySeeds = require('./itemHistorySeeds.json')
+
 
 // Item.insertMany(itemSeeds)
 // .then(console.log)
@@ -15,13 +14,13 @@ const ItemHistorySeeds = require('./itemHistorySeeds.json')
 // User.insertMany(userSeeds)
 // .then(console.log)
 
-ItemHistory.insertMany(ItemHistorySeeds)
-.then(console.log)
+// ItemHistory.insertMany(ItemHistorySeeds)
+// .then(console.log)
 
 Item.deleteMany({})
 .then(()=> User.deleteMany({}))
 .then(()=> {
-    return User.create({email: 'fake@email.com', username:'Fake Person', password:'fakepassword', city:'Boulder', state:'Colorado', zipcode:80304 })
+    return User.create({email: 'fake@email.com', username:'Fake Person', password:'fakepassword', city:'Boulder', state:'Colorado', zipcode:80304, itemsHistory:["62267a877517f7d0aeb547ef"]})
     .then((user)=> 
         itemSeeds.map((item)=> ({...item, owner:user._id}))
     )

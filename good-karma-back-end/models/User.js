@@ -27,7 +27,11 @@ const UserSchema = new mongoose.Schema(
     zipcode:{
         type:Number, 
         required:true,
-    }
+    },
+    itemsHistory: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Item'
+    }]
     }
 
 )

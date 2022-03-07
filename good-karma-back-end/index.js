@@ -29,8 +29,8 @@ app.get('/', (req, res) => {
 const itemController = require('./controllers/itemController');
 app.use('/api/items', itemController);
 
-// const userController = require('./controllers/userController');
-// app.use('/', userController);
+const userController = require('./controllers/userController');
+app.use('/api/users', userController);
 
 
 

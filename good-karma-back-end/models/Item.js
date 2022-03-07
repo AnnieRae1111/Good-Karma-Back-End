@@ -5,10 +5,16 @@ const ItemSchema = new mongoose.Schema({
     title: String, 
     date_posted: Date,
     owner:{
-        type:String, 
+        type:mongoose.Schema.Types.ObjectId, 
         ref:'User',
         required: true,
-    }
+    },
+    claimed_by:{
+        type:mongoose.Schema.Types.ObjectId, 
+        ref:'User',
+        
+    },
+    images: []
 })
 
 const Item = mongoose.model('Item', ItemSchema)
