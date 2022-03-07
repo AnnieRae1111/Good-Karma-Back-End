@@ -3,8 +3,8 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 
-//get all users 
-const get
+// //get all users 
+// const get
 
 
 
