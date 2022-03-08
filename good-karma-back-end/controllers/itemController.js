@@ -1,10 +1,10 @@
 const express = require('express')
-
 const router = express.Router()
 const Item = require('../models/Item')
+const { requireToken } = require('../middleware/auth')
 
 //get all items 
-router.get('/', async (req, res, next)=> {
+router.get('/', requireToken, async (req, res, next)=> {
     try{
         const item = await Item.find({})
         console.log(res.json(item))
@@ -14,7 +14,7 @@ router.get('/', async (req, res, next)=> {
 })
 
 //get item by id 
-router.get('/:id', async (req, res, next)=>{
+router.get('/:id',requireToken, async (req, res, next)=>{
     try{
         const oneItem = await Item.findById(req.params.id)
         res.json(oneItem)
@@ -25,7 +25,7 @@ router.get('/:id', async (req, res, next)=>{
 })
 
 //create a new item// post an item 
-router.post('/', async (req, res, next)=> {
+router.post('/', requireToken, async (req, res, next)=> {
     try{
         const newItem = await Item.create(req.body)
         res.status(201).json(newItem)
@@ -35,7 +35,7 @@ router.post('/', async (req, res, next)=> {
 })
 
 //Update an item 
-router.put('/:id', async (req, res, next)=> {
+router.put('/:id', requireToken, async (req, res, next)=> {
     try{
         const itemToUpdate = await Item.findByIdAndUpdate(
             req.params.id, 
@@ -56,7 +56,7 @@ router.put('/:id', async (req, res, next)=> {
 
 
 //delete an item 
-router.delete('/:id', async (req, res, next)=> {
+router.delete('/:id',requireToken, async (req, res, next)=> {
     try{
         const itemToDelete = await Item.findByIdAndDelete(req.params.id)
         console.log(itemToDelete)
