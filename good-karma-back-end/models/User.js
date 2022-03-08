@@ -8,11 +8,6 @@
                 required: true,
                 unique: true,
             },
-            username: {
-                type:String, 
-                required:true,
-                unique: true,
-            },
             password: {
                 type: String,
                 required: true,
@@ -27,7 +22,7 @@
             zipcode: {
                 type:Number,
             },
-            itemHistory: [{
+            itemsHistory: [{
                 type:mongoose.Schema.Types.ObjectId,
                 ref:'Item'
             }]

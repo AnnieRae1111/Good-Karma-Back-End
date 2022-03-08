@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-// const bcrypt = require('bcrypt') //user auth 
 require('./db/connection')
 const PORT = process.env.PORT
 app.set('port', process.env.PORT || 8000)

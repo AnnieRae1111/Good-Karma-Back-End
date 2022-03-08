@@ -20,7 +20,7 @@ const userSeeds = require('./userSeeds.json')
 Item.deleteMany({})
 .then(()=> User.deleteMany({}))
 .then(()=> {
-    return User.create({email: 'fake@email.com', username:'Fake Person', password:'fakepassword', city:'Boulder', state:'Colorado', zipcode:80304, itemsHistory:["62267a877517f7d0aeb547ef"]})
+    return User.create({email: 'fake@email.com', password:'fakepassword', city:'Boulder', state:'Colorado', zipcode:80304, itemsHistory:["62267a877517f7d0aeb547ef"]})
     .then((user)=> 
         itemSeeds.map((item)=> ({...item, owner:user._id}))
     )
