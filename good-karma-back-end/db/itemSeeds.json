@@ -3,30 +3,35 @@
         "category":"clothing",
         "title": "shirt",
         "date_posted": "03-02-2022",
-        "owner":"annierae89"
+        "owner":"annierae89",
+        "images": ["haryo-setyadi-acn5ERAeSb4-unsplash.jpg"]
     },
     {
         "category":"clothing",
         "title": "jacket",
         "date_posted": "02-02-2022",
-        "owner":"annierae89"
+        "owner":"annierae89",
+        "images":["tobias-tullius-Fg15LdqpWrs-unsplash.jpg"]
     },
     {
         "category":"furniture",
         "title": "arm chair",
         "date_posted": "02-02-2022",
-        "owner":"annierae89"
+        "owner":"annierae89",
+        "images":["andrea-davis-duXRC8vT5wQ-unsplash.jpg"]
     },
     {
         "category":"household",
         "title": "blender",
         "date_posted": "01-04-2022",
-        "owner":"annierae89"
+        "owner":"annierae89",
+        "images": ["jake-weirick-eZFvKguqwKw-unsplash.jpg"]
     },
     {
         "category":"books",
         "title": "Harry Potter and the Sorceres Stone",
         "date_posted": "11-05-2021",
-        "owner":"annierae89"
+        "owner":"annierae89",
+        "images": ["madalyn-cox-ClqjpGgfwRY-unsplash.jpg"]
     }
 ]

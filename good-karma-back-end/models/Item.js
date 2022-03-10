@@ -5,7 +5,7 @@ const ItemSchema = new mongoose.Schema({
     title: String, 
     date_posted: Date,
     owner:{
-        type:mongoose.Schema.Types.ObjectId, 
+        type:String, 
         ref:'User',
         required: true,
     },

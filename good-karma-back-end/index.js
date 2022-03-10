@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
-const cors = require('cors')
 require('./db/connection')
 const PORT = process.env.PORT
+const cors = require('cors')
+
+
+
 app.set('port', process.env.PORT || 8000)
 
 
@@ -10,9 +13,13 @@ app.set('port', process.env.PORT || 8000)
 //========== 
 //MIDDLEWARE
 //==========
+
+// Add Access Control Allow Origin headers
+
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-app.use(cors())
+
 
 
 //===========
@@ -36,6 +43,8 @@ app.use('/api/items', itemController);
 const userController = require('./controllers/userController');
 app.use('/api/users', userController);
 
+
+
 // const userController = require('./controllers/usersController');
 // app.use('/api', userController);
 
@@ -49,8 +58,8 @@ app.use((err, req, res, next) => {
 })
 
 // //The catch all for handling erros
-// const { handleErrors } = require('./middleware/custom_errors');
-// app.use(handleErrors);
+const { handleErrors } = require('./middleware/custom_errors');
+app.use(handleErrors);
 
 
 //START THE SERVER
