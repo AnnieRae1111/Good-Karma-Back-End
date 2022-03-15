@@ -4,6 +4,11 @@ const ItemSchema = new mongoose.Schema({
     category:String,
     title: String, 
     date_posted: Date,
+    description: String,
+    posted_by: String,
+    photoUrl: String, 
+
+
     owner:{
         type:String, 
         ref:'User',
