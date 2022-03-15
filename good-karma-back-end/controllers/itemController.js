@@ -32,36 +32,35 @@ router.get('/:id', async (req, res, next)=>{
 
 
 // create a new item// post an item 
-// const Upload = upload.fields([{category:'category', title:'title', date_posted:'date posted', images:8}])
-router.post('/', async (req, res, next)=> {
-    try{
-        const newItem = await Item.create(req.body)
-        res.status(201).json(newItem)
-        const file = req.file
-        console.log(file)
-    }catch (err){
-        next(err)
-    }
-})
 
-//sending images back 
+// router.post('/', async (req, res, next)=> {
+//     try{
+//         const newItem = await Item.create(req.body)
+//         res.status(201).json(newItem)
+//     }catch (err){
+//         next(err)
+//     }
+// })
+
+//sending images back from s3
 router.get('/:key', (req, res)=> {
     const key = req.params.key
     const readStream = getFileStream(key)
     readStream.pipe(res)
+    //send image data to client
 })
 
-router.post('/', upload.single('newImage'), async(req, res, next)=> {
+// post images and FILE UPLOAD
+router.post('/', upload.single('file'), async(req, res, next)=> {
     try{
-        const file = req.file
+        const newItem = await Item.create(req.body)
+        res.status(201).json(newItem)
+        const file =req.file
         console.log(file)
         const result = await uploadFile(file)
         console.log(result)
-        res.send('success')
         res.send({imagePath: `/${result.Key}`})
-        const newItem = await Item.create(req.body)
-        res.status(201).json(newItem,'newitem')
-        console.log(newItem)
+        
     }catch(err){
         next(err)
     }
@@ -71,6 +70,8 @@ router.post('/', upload.single('newImage'), async(req, res, next)=> {
 //Update an item 
 router.put('/:id', async (req, res, next)=> {
     try{
+        console.log(req.params.id)
+        console.log(req.body)
         const itemToUpdate = await Item.findByIdAndUpdate(
             req.params.id, 
             req.body,

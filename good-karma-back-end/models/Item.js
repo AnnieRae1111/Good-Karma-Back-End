@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 const ItemSchema = new mongoose.Schema({
     category:String,
     title: String, 
-    date_posted: Date,
+    date_posted: String,
+    photoUrl:String,
+    description:String,
     owner:{
         type:String, 
         ref:'User',
-        required: true,
+         
     },
     claimed_by:{
         type:mongoose.Schema.Types.ObjectId, 
