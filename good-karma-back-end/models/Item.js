@@ -7,8 +7,6 @@ const ItemSchema = new mongoose.Schema({
     description: String,
     posted_by: String,
     photoUrl: String, 
-
-
     owner:{
         type:String, 
         ref:'User',
