@@ -7,7 +7,7 @@ const ItemSchema = new mongoose.Schema({
     owner:{
         type:String, 
         ref:'User',
-        required: true,
+        // required: true,
     },
     claimed_by:{
         type:mongoose.Schema.Types.ObjectId, 

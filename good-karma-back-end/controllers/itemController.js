@@ -51,22 +51,22 @@ router.get('/:key', (req, res)=> {
     readStream.pipe(res)
 })
 
-router.post('/', upload.single('newImage'), async(req, res, next)=> {
-    try{
-        const file = req.file
-        console.log(file)
-        const result = await uploadFile(file)
-        console.log(result)
-        res.send('success')
-        res.send({imagePath: `/${result.Key}`})
-        const newItem = await Item.create(req.body)
-        res.status(201).json(newItem,'newitem')
-        console.log(newItem)
-    }catch(err){
-        next(err)
-    }
+// router.post('/', upload.single('newImage'), async(req, res, next)=> {
+//     try{
+//         const file = req.file
+//         console.log(file)
+//         const result = await uploadFile(file)
+//         console.log(result)
+//         res.send('success')
+//         res.send({imagePath: `/${result.Key}`})
+//         const newItem = await Item.create(req.body)
+//         res.status(201).json(newItem,'newitem')
+//         console.log(newItem)
+//     }catch(err){
+//         next(err)
+//     }
 
-})
+// })
 
 //Update an item 
 router.put('/:id', async (req, res, next)=> {
