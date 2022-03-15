@@ -16,8 +16,9 @@ app.set('port', process.env.PORT || 8000)
 
 // Add Access Control Allow Origin headers
 
-app.use(cors())
+
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 
 
