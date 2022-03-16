@@ -1,0 +1,52 @@
+[
+    {
+        "category":"clothing",
+        "title": "shirt",
+        "date_posted": "03-02-2022",
+        "photoUrl":"https://i.imgur.com/5fDoBqY.jpg",
+        "description":"this is a description",
+        "posted_by": "annierae",
+        "owner":"annierae89",
+        "images": ["https://i.imgur.com/5fDoBqY.jpg"]
+    },
+    {
+        "category":"clothing",
+        "title": "jacket",
+        "date_posted": "02-02-2022",
+        "photoUrl":"https://i.imgur.com/TJMdSHN.jpg",
+        "description":"this is a description",
+        "posted_by": "annierae",
+        "owner":"annierae89",
+        "images":["https://i.imgur.com/TJMdSHN.jpg"]
+    },
+    {
+        "category":"furniture",
+        "title": "arm chair",
+        "date_posted": "02-02-2022",
+        "photoUrl":"https://i.imgur.com/dlpLab4.jpg",
+        "description":"this is a description",
+        "posted_by": "annierae",
+        "owner":"annierae89",
+        "images":["https://i.imgur.com/dlpLab4.jpg"]
+    },
+    {
+        "category":"household",
+        "title": "blender",
+        "date_posted": "01-04-2022",
+        "photoUrl":"https://i.imgur.com/2U5laBR.jpg",
+        "description":"this is a description",
+        "posted_by": "annierae",
+        "owner":"annierae89",
+        "images": ["https://i.imgur.com/2U5laBR.jpg"]
+    },
+    {
+        "category":"books",
+        "title": "Harry Potter and the Sorceres Stone",
+        "date_posted": "11-05-2021",
+        "photoUrl":"https://i.imgur.com/N7Jkyxg.jpg",
+        "description":"this is a description",
+        "posted_by": "annierae",
+        "owner":"annierae89",
+        "images": ["https://i.imgur.com/N7Jkyxg.jpg"]
+    }
+]
